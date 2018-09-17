@@ -1,0 +1,6 @@
+.panel.panel-default
+  .panel-heading
+    = fa_icon "bar-chart-o", class: "fa-fw"
+    = "Pie Chart"
+  .panel-body
+    = pie_chart @chart_values, colors: ["#337ab7", "#5cb85c", "#f0ad4e", "#d9534f"]

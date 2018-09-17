@@ -1,0 +1,13 @@
+%header.masthead.text-white.text-center
+  .overlay
+  .container
+    .row
+      .col-xl-9.mx-auto
+        %h1.mb-5= "Build a landing page for your business or project and generate more leads!"
+      .col-md-10.col-lg-8.col-xl-7.mx-auto
+        = simple_form_for(:tenant, url: submit_login_website_index_path) do |f|
+          .form-row
+            .col-12.col-md-9.mb-2.mb-md-0
+              = f.input :name, label: false, wrapper: false, placeholder: "Enter your name...", input_html: {class: "input-lg"}
+            .col-12.col-md-3
+              = f.submit "Sign In", class: "btn btn-block btn-lg btn-primary"

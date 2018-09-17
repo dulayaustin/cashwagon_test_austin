@@ -1,0 +1,44 @@
+#wrapper
+  .row
+    .col-lg-12
+      %h1.page-header= "Dashboard"
+
+  = render "website/heading_totals"
+
+  #dashboard_container
+    .row
+      .col-lg-8
+        = render "website/pie_chart_totals"
+
+
+        - if @public_questions.present?
+          .panel.panel-default
+            .panel-heading
+              = fa_icon "comments", class: "fa-fw"
+              = "Questions"
+            .panel-body
+              .list-group
+                - @public_questions.each_with_index do |question, idx|
+                  - position = idx + 1
+                  - question_answers = question.answers
+                  %li.list-group-item
+                    .margin-bottom-half
+                      %b= "#{position}."
+                      = question.title
+                      = link_to "#", class: "question-answers-button", data: {question_id: question.id} do
+                        = fa_icon "chevron-down", class: "fa-fw"
+                    %ul.question-answers{data: {question_id: question.id}}
+                      - if question_answers.present?
+                        - question_answers.each do |answer|
+                          %li
+                            %b= answer.user.name
+                            = "-"
+                            = answer.body
+                      - else
+                        %li
+                          .alert.alert-danger= "No answers yet."
+
+      .col-lg-4
+        = render "website/users_list"
+
+

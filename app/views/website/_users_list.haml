@@ -1,0 +1,9 @@
+.panel.panel-default
+  .panel-heading
+    = fa_icon "users", class: "fa-fw"
+    = "Users"
+  .panel-body
+    .list-group
+      - @users.each do |user|
+        %li.list-group-item
+          = user.name

@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %title= ENV['APP_TITLE']
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = render "layouts/navigation"
+    = yield
+    = render "layouts/footer"

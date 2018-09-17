@@ -1,0 +1,44 @@
+.row
+  .col-lg-3.col-md-6
+    .panel.panel-primary
+      .panel-heading
+        .row
+          .col-xs-3
+            = fa_icon "comments", class: "fa-5x"
+          .col-xs-9.text-right
+            .huge= @public_questions.length
+            %div= "Total Questions"
+      .panel-footer= raw "&nbsp;"
+
+  .col-lg-3.col-md-6
+    .panel.panel-green
+      .panel-heading
+        .row
+          .col-xs-3
+            = fa_icon "address-card", class: "fa-5x"
+          .col-xs-9.text-right
+            .huge= @public_answers.length
+            %div= "Total Answers"
+      .panel-footer= raw "&nbsp;"
+
+  .col-lg-3.col-md-6
+    .panel.panel-yellow
+      .panel-heading
+        .row
+          .col-xs-3
+            = fa_icon "users", class: "fa-5x"
+          .col-xs-9.text-right
+            .huge= @users.length
+            %div= "Total Users"
+      .panel-footer= raw "&nbsp;"
+
+  .col-lg-3.col-md-6
+    .panel.panel-red
+      .panel-heading
+        .row
+          .col-xs-3
+            = fa_icon "eye", class: "fa-5x"
+          .col-xs-9.text-right
+            .huge= @all_tenant_views
+            %div= "All Tenant Views"
+      .panel-footer= raw "&nbsp;"
