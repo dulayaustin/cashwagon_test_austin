@@ -1,3 +1,8 @@
+# From Austin:
+I added gems for this test, after `bundle install`. Run `rails generate simple_form:install --bootstrap`.
+
+Regarding tests, honestly I am not trained to write tests structure and also I am not exposed on it because my current company does not have one. We only have Rollbar which is a server-side plugin where it tracks and alerts error in realtime on production and staging.
+
 # Cashwagon Rails Engineer Candidate Interview Project
 
 Thanks for taking the time to complete this exercise. We're excited that you're considering joining our amazing team.
